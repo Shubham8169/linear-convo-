@@ -1,0 +1,89 @@
+Image Negative/////////////
+clc;
+original=imread("C:\Users\HP\Documents\Dip Pracs\cameraman.jpg");
+imgdouble=double(original);
+//For 8 bit image c=255;
+c=255;
+negative=c-original;
+figure(1)
+imshow(original);
+figure(2)
+imshow(negative);
+Threshold/////////////////
+clc ;
+a = imread ("C:\Users\HP\Documents\Dip Pracs\cameraman.jpg");
+a = rgb2gray (a);
+[m n] = size (a);
+t = input("Enter the threshold parameter ");
+for i = 1:m
+ for j = 1:n
+ if(a(i,j)<t)
+ b(i,j)=0;
+ else
+ b(i,j)=255;
+ end end end
+figure (1)
+imshow(uint8(a));
+title ( ' Original Image ' )
+figure (2)
+imshow(uint8(b));
+title ( ' Thresholded Image ' )
+xlabel(sprintf( 'Threshold Value is %g ' ,t))
+Grey Level Slicing with Background//////////////////////
+clc;
+original=imread("C:\Users\HP\Documents\Dip Pracs\cameraman.jpg");
+doub=double(original);
+[row column]=size(doub);
+for i=1:1:row
+ for j=1:1:column
+ if((doub(i,j)> 50) && (doub(i,j)<150))
+ doub(i,j)=0;
+end end end
+figure(1) ; imshow(original);
+figure(2);imshow(uint8(doub));
+
+
+Grey Level Slicing without Background
+clc;
+original=imread("C:\Users\HP\Documents\Dip Pracs\cameraman.jpg");
+doub=double(original);
+[row column]=size(doub);
+for i=1:1:row
+ for j=1:1:column
+ if((doub(i,j)> 100) && (doub(i,j)<150))
+ doub(i,j)=original(i,j);
+end end end
+figure(1)
+imshow(original);
+figure(2)
+imshow(uint8(doub));
+
+
+
+
+
+Bitplane/////////////////////////////////
+clc;
+clear all;
+clf;
+c=imread("C:\Users\HP\Documents\Dip Pracs\cameraman.jpg");
+cd = double(c);
+c1 = modulo(cd, 2);
+c2 = modulo(floor(cd/2), 2);
+c3 = modulo(floor(cd/4), 2);
+c4 = modulo(floor(cd/8), 2);
+c5 = modulo(floor(cd/16), 2);
+c6 = modulo(floor(cd/32), 2);
+c7 = modulo(floor(cd/64), 2);
+c8 = modulo(floor(cd/128), 2);
+cc = (2 * (2 * (2 * (2 * (2 * (2 * (2 * c8 + c7) + c6) + c5) + c4)+ c3) + c2) + c1);
+subplot(2, 5, 1);imshow(c); title('Original Image');
+title('Bit Plane 1');
+subplot(2, 5, 2); imshow(c2); title('Bit Plane 2');
+subplot(2, 5, 3); imshow(c3); title('Bit Plane 3');
+subplot(2, 5, 4); imshow(c4); title('Bit Plane 4');
+subplot(2, 5, 5); imshow(c5); title('Bit Plane 5');
+subplot(2, 5, 6); imshow(c6); title('Bit Plane 6');
+subplot(2, 5, 7); imshow(c7); title('Bit Plane 7');
+subplot(2, 5, 8); imshow(c8); title('Bit Plane 8');
+imshow(uint8(cc)); title('Recombined Image');
