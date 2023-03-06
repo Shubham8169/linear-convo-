@@ -1,0 +1,13 @@
+clc;
+clf;
+i=imread("C:\Users\admin\Desktop\DIP Practs\codes\download.jpeg")
+ihsv=rgb2hsv(i)
+ih=imhistequal(ihsv(:,:,3));
+ihsv(:,:,3)=ih;
+io=hsv2rgb(ih);
+subplot(1,2,1);
+imshow(i);
+title("Original Image");
+subplot(1,2,2);
+imshow(ihsv);
+title("Color Image Histogram")
