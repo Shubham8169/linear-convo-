@@ -1,0 +1,38 @@
+RSS FEED
+Go to google on rss builder download 
+And open 
+Title -Nestle
+Website Url-https://www.nestle.com/
+Copyright-2014 nestle
+Editor-author@gmail.com
+Webmaster-webmaster@gmail.com
+Description-This is lavda lasan
+Go to right side topic title uper side button add topic give title
+New RSS feed
+
+Link-https://www.nestle.com/
+Category-General (G capital)
+Comments-https://www.nestle.com/comments.aspx
+Author- author@gmail.com
+
+Now save 
+Open now visual studio web developer 2010
+Enter new project
+Asp.net web application select and ok
+
+We have to add a line code after opening a code file
+
+In lower side
+</p>
+<p><a href="rss.xml"></a>.</p>
+</asp:Content>
+(file ka name dalna hai jo name se save kiya hai)
+(Page name was default.aspx)
+And cntrl+s save
+And run
+
+Now opening a page
+
+Now go on chrome webstore
+Search rss extension and add
+
