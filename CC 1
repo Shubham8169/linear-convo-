@@ -1,0 +1,87 @@
+*Login aws account(Iaas)*
+In video 1
+
+Search EC2
+Go to launch instance 
+Give name anything
+Scroll down
+And then their key pair name select without key pair
+In right side launch instance button click on it
+After creating instance 
+
+Go to left side panel and go through instances and there will show your name instance created and click on it
+Next below you see security click on it
+There will show inbound rules select there launch wizard and click
+
+Next we have to add rule go to inbound rules and Edit inbound rules
+And then there will show add rule 
+Add rule in choose (custom icmp ipv4)
+In ALL select echo request and next anywhere ipv4 and save.
+
+Now go to left side panel instances and select your created name there will show ip address ping on cmd and 
+
+And last instance state upper side select stop otherwise it will charge on credit card
+Done
+
+*(Paas)*
+
+Search LAMBDA
+
+After opening show (create function) click on it
+Give Function name
+In runtime select any platform
+And create then function created
+Scroll down
+Click TEST 
+Give Event name and save and again click on TEST 
+
+Done(paas platform me code create and run hota hai)
+
+
+*(Saas)*
+
+Search Elastic beanstalk
+Click create a new environment 
+And select web server environment and select
+Name the application 
+Click on envi name
+Choose platform ex-docker
+Next sample application 
+And create
+
+Aftere created
+Then click on upload and deploy
+Befor choose file go on upper side (application version page)
+Select your created application 
+Now click on your choosen platform
+Choose your selected (docker)
+After downloading docker
+
+Go on back page where shows upload and deploy
+And select choose file and upload your downloaded docker 
+Then it will run and it's done🌟
+
+
+*MFA* in video3
+
+Search IAM
+now showing a mfa page
+Now go on ADD MFA
+Now go on assign MFA device
+Give device name and select authenticator app
+And click on next
+Now it will show you barcode 
+Scan with mobile google authenticator app
+And fill otp code on MFA CODE 1 and after 30 sec Fill MFA CODE 2 OTP and ADD MFA...
+
+After adding mfa go to right corner and log out
+And sign in to the console 
+Fill username and password and click sig in
+There will show MFA code
+And wait for mobile code and fill and submit
+Login successfully its done
+
+
+
+
+
